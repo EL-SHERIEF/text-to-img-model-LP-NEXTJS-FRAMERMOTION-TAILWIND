@@ -3,19 +3,95 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better button hover states */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Improved text rendering */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/* Custom mask for marquee */
+.mask-gradient {
+  mask-image: linear-gradient(to right, 
+    transparent, 
+    black 10%, 
+    black 90%, 
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(to right, 
+    transparent, 
+    black 10%, 
+    black 90%, 
+    transparent
+  );
+}
+
+/* Prevent layout shift */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Better image rendering */
+img {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* 3D Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+/* Benefit card styles */
+@property --card-gradient-stop {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 10%;
+}
+
+.benefit-card {
+  --card-gradient-stop: 10%;
+  transition: --card-gradient-stop 0.3s ease;
+}
+
+.benefit-card:hover {
+  --card-gradient-stop: 30%;
+}
+
+/* Stats gradient text */
+.stats-gradient {
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
