@@ -7,7 +7,7 @@ const HeroContent = () => {
     <div className="w-full max-w-[1200px] mx-auto text-center flex flex-col items-center gap-8 px-4">
       {/* Project management tag */}
       
-      <button className="relative z-10 group flex items-center gap-3 px-5 py-2.5 bg-[#18181B] hover:bg-[#27272A] rounded-full transition-colors duration-200">
+      <button className="mb-[-20px] relative z-10 group flex items-center gap-3 px-5 py-2.5 bg-[#18181B] hover:bg-[#27272A] rounded-full transition-colors duration-200">
         <div className="flex items-center gap-3">
           {/* Logo */}
           <div className="w-5 h-5 rounded-full bg-gradient-to-b from-white/90 to-white/70">
@@ -42,15 +42,15 @@ const HeroContent = () => {
         </div>
       </button>
       
-      <div className="relative z-10 space-y-6">
-        <h1 className="text-[64px] leading-[1.1] font-semibold tracking-[-0.02em] bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-          Plan and navigate<br />
-          from idea to launch.
+      <div className="relative z-10 space-y-7">
+        <h1 className="text-[70px] leading-[1.2] tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+          Design and innovate<br />
+          Successful digital ideas.
         </h1>
         
         <p className="text-xl text-zinc-400 max-w-2xl mx-auto font-normal">
-          Create a clear roadmap, track progress, and smoothly guide your project
-          from idea to successful launch.
+          Create a clear photo, track progress, and smoothly learn how to master
+          your ideas to successful Pictures that can sell.
         </p>
       </div>
       
