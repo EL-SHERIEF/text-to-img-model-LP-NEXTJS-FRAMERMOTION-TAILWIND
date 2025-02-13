@@ -37,6 +37,7 @@ const FloatingMockups = () => {
   const parallaxY = useTransform(scrollYProgress, [0, 1], ['0px', '-40vh']); // Parallax effect
 
   return (
+ <>
     <motion.div
       ref={containerRef}
       className="absolute z-0 top-5 w-screen h-[120vh] flex justify-center items-center overflow-hidden pointer-events-none"
@@ -70,6 +71,7 @@ const FloatingMockups = () => {
         ))}
       </div>
     </motion.div>
+ </>
   );
 };
 

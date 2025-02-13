@@ -2,9 +2,8 @@
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import lightEffect from '@/public/assets/2.webp';
 import image1 from '@/public/Photos/hd.jpg';
-
+import icon from '@/app/favicon.svg'
 const ProductOverview = () => {
   const containerRef = useRef(null);
   const imageRef = useRef(null);
@@ -20,8 +19,7 @@ const ProductOverview = () => {
   });
 
   // Transform values for animations
-  const lightScale = useTransform(containerProgress, [0, 0.5], [0.8, 1.2]);
-  const lightOpacity = useTransform(containerProgress, [0, 0.3], [0.3, 1]);
+  const lightScale = useTransform(containerProgress, [0, 0.6], [0.3, 1.2]);
   const contentY = useTransform(containerProgress, [0, 0.5], [100, 0]);
   const contentOpacity = useTransform(containerProgress, [0, 0.3], [0, 1]);
 
@@ -35,23 +33,35 @@ const ProductOverview = () => {
     <section ref={containerRef} className="relative min-h-screen pt-32 pb-16 overflow-hidden">
       {/* Light effect */}
       <motion.div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl"
+        className="absolute top-0 left-[15vw] w-[70vw] z-10"
         style={{
           scale: lightScale,
-          opacity: lightOpacity,
         }}
       >
-        <Image
-          src={lightEffect}
-          alt="Light effect"
-          className="w-full"
-          priority
-        />
+                   <div className='w-full h-2 bg-white blur-[4px]'></div>
+                   <div className='w-full h-1 bg-white blur-[10px]'></div>
+           <div className='w-full h-2 bg-white blur-[20px]'></div>
+          <svg className='w-full h-100px blur-[200px] opacity-60 absolute top-0' viewBox="0 0 1067 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1067" height="12" rx="6" fill="url(#paint0_linear_2378_13)"/>
+<path d="M0 12H1063L1040.16 202.523C1038.75 214.27 1034.06 225.383 1026.63 234.589L909.128 380.18C896.762 395.502 877.943 404.162 858.261 403.586L217.465 384.847C199.081 384.309 181.849 375.765 170.294 361.456L29.9959 187.735C22.4871 178.437 17.7778 167.195 16.4177 155.322L0 12Z" fill="url(#paint1_radial_2378_13)"/>
+<defs>
+<linearGradient id="paint0_linear_2378_13" x1="403" y1="22.5" x2="403" y2="6" gradientUnits="userSpaceOnUse">
+<stop offset="0.5" stopColor="white" stop-opacity="0.41"/>
+<stop offset="0.75" stopColor="white"/>
+<stop offset="1" stopColor="white" stop-opacity="0.7"/>
+</linearGradient>
+<radialGradient id="paint1_radial_2378_13" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(531 77) rotate(90) scale(312.5 846.338)">
+<stop stopColor="white"/>
+<stop offset="1" stopColor="white" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
+
       </motion.div>
 
       {/* Content */}
       <motion.div 
-        className="relative z-10 max-w-2xl mx-auto text-center pt-24"
+        className="relative z-1 max-w-2xl mx-auto text-center pt-0"
         style={{
           y: contentY,
           opacity: contentOpacity,
@@ -59,11 +69,7 @@ const ProductOverview = () => {
       >
         {/* Logo */}
         <div className="flex justify-center mb-8">
-          <div className="w-12 h-12 rounded-2xl bg-[#18181B] shadow-lg flex items-center justify-center">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-              <circle cx="12" cy="12" r="10" fill="currentColor"/>
-            </svg>
-          </div>
+          <Image src={icon} alt="Logo" width={100} height={100} />
         </div>
 
         {/* Tag */}

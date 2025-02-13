@@ -1,11 +1,13 @@
 'use client';
 import CTAButton from './CTAButton';
-
+import Image from 'next/image';
+import dots from '@/public/assets/1.webp';
 const HeroContent = () => {
   return (
     <div className="w-full max-w-[1200px] mx-auto text-center flex flex-col items-center gap-8 px-4">
       {/* Project management tag */}
-      <button className="group flex items-center gap-3 px-5 py-2.5 bg-[#18181B] hover:bg-[#27272A] rounded-full transition-colors duration-200">
+      
+      <button className="relative z-10 group flex items-center gap-3 px-5 py-2.5 bg-[#18181B] hover:bg-[#27272A] rounded-full transition-colors duration-200">
         <div className="flex items-center gap-3">
           {/* Logo */}
           <div className="w-5 h-5 rounded-full bg-gradient-to-b from-white/90 to-white/70">
@@ -40,7 +42,7 @@ const HeroContent = () => {
         </div>
       </button>
       
-      <div className="space-y-6">
+      <div className="relative z-10 space-y-6">
         <h1 className="text-[64px] leading-[1.1] font-semibold tracking-[-0.02em] bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
           Plan and navigate<br />
           from idea to launch.
@@ -52,7 +54,7 @@ const HeroContent = () => {
         </p>
       </div>
       
-      <div className="flex flex-col items-center gap-4 pt-4">
+      <div className="relative z-10 flex flex-col items-center gap-4 pt-4">
         <CTAButton>Get Started For Free</CTAButton>
         <div className="flex items-center gap-2 text-sm text-zinc-500">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,6 +64,7 @@ const HeroContent = () => {
           No credit card required
         </div>
       </div>
+      <Image src={dots} alt="Dots" className="absolute w-screen h-screen top-0 left-0 pointer-events-none" />
     </div>
   );
 };
