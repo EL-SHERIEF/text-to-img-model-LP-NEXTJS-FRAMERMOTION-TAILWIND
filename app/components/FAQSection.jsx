@@ -7,7 +7,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
     <div className="relative">
       <button
         onClick={onToggle}
-        className="w-full px-6 py-5 text-left rounded-2xl bg-[#18181B]/60 border border-white/[0.08] hover:bg-[#18181B]/80 transition-colors duration-200 group"
+        className="w-full px-6 py-5 text-left rounded-2xl bg-[#18181B]/60 border border-white/[0.08] hover:bg-[ transition-colors duration-200 group"
       >
         <div className="flex items-center justify-between">
           <span className="text-[15px] font-medium text-white">{question}</span>

@@ -8,10 +8,10 @@ const BenefitCard = ({ icon, title, description }) => {
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff11_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
       
       {/* Card border with gradient */}
-      <div className="absolute inset-px rounded-2xl bg-gradient-to-b from-white/[0.12] to-transparent" />
+      <div className="absolute inset-px rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent" />
       
       {/* Card content */}
-      <div className="relative p-8 rounded-2xl bg-[#18181B]/80 border border-white/[0.08] backdrop-blur-sm space-y-4">
+      <div className="relative p-8 rounded-2xl  border border-white/[0.08] backdrop-blur-sm space-y-4">
         <div className="w-12 h-12 rounded-xl bg-[#18181B] border border-white/[0.08] flex items-center justify-center">
           {icon}
         </div>

@@ -22,7 +22,7 @@ const HeroContent = () => {
         </div>
         
         {/* Arrow */}
-        <div className="relative w-5 h-5 rounded-full bg-white/[0.08] group-hover:bg-white/[0.12] transition-colors duration-200">
+        <div className="relative w-5 h-5 rounded-full bg-white/[0.08] group-hover:bg-white/[0.03] transition-colors duration-200">
           <svg 
             width="20" 
             height="20" 

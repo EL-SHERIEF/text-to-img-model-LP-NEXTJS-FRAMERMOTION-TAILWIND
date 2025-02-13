@@ -64,7 +64,7 @@ const FloatingMockups = () => {
               height: `${elements[index].height}px`
             }}
           >
-            <div className="absolute inset-0 bg-[#18181B]/80" />
+            <div className="absolute inset-0 bg-[" />
             <Image src={src} alt="Project interface" fill className="object-cover opacity-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </motion.div>
