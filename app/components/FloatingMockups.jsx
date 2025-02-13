@@ -1,13 +1,31 @@
 'use client';
+
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+
 import photo1 from '@/public/Photos/1.png';
 import photo2 from '@/public/Photos/2.png';
-import photo3 from '@/public/Photos/11.jpeg';
-import photo4 from '@/public/Photos/4.jpeg';
-import photo5 from '@/public/Photos/5.jpeg';
-import photo6 from '@/public/Photos/6.jpeg';
+import photo3 from '@/public/Photos/10.jpeg';
+import photo4 from '@/public/Photos/5.jpeg';
+import photo5 from '@/public/Photos/6.jpeg';
+import photo6 from '@/public/Photos/7.jpeg';
+import photo7 from '@/public/Photos/8.jpeg';
+import photo8 from '@/public/Photos/9.jpeg';
+
+const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8];
+
+const elements = [
+  { x: '-24%', y: '10%', width: 300, height: 300 },
+  { x: '-5%', y: '45%', width: 100, height: 140 },
+  { x: '-16%', y: '45%', width: 100, height: 140 },
+  { x: '-30%', y: '65%', width: 380, height: 260 },
+   // second row
+  { x: '90%', y: '20%', width: 320, height: 210 },
+  { x: '90%', y: '46%', width: 150, height: 150 },
+  { x: '105%', y: '45%', width: 160, height: 160 },
+  { x: '95%', y: '67%', width: 210, height: 270 }
+];
 
 const FloatingMockups = () => {
   const containerRef = useRef(null);
@@ -16,106 +34,40 @@ const FloatingMockups = () => {
     offset: ['start end', 'end start']
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
+  const parallaxY = useTransform(scrollYProgress, [0, 1], ['0px', '-40vh']); // Parallax effect
 
   return (
-    <motion.div 
+    <motion.div
       ref={containerRef}
-      style={{ y }}
-      className="absolute inset-0 -top-24 -bottom-24 overflow-hidden pointer-events-none select-none"
+      className="absolute z-0 top-5 w-screen h-[120vh] flex justify-center items-center overflow-hidden pointer-events-none"
+      style={{ y: parallaxY }} // Apply parallax movement
     >
-      <div className="relative w-full h-full max-w-7xl mx-auto">
-        {/* Left side mockups */}
-        <div className="absolute top-[20%] -left-10 w-[480px]">
-          <div className="relative">
-            {/* Main window */}
-            <div className="relative w-[420px] h-[280px] rounded-2xl overflow-hidden animate-float-1 shadow-2xl">
-              <div className="absolute inset-0 bg-[#18181B]/80" />
-              <Image
-                src={photo1}
-                alt="Project interface"
-                fill
-                className="object-cover mix-blend-luminosity opacity-90"
-                sizes="420px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-
-            {/* Floating elements */}
-            <div className="absolute -top-12 right-12 w-64 h-48 rounded-2xl overflow-hidden animate-float-3 delay-300 shadow-xl">
-              <div className="absolute inset-0 bg-[#18181B]/80" />
-              <Image
-                src={photo2}
-                alt="Project interface"
-                fill
-                className="object-cover mix-blend-luminosity opacity-90"
-                sizes="256px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-
-            <div className="absolute -bottom-8 right-0 w-56 h-56 rounded-2xl overflow-hidden animate-float-2 delay-700 shadow-xl">
-              <div className="absolute inset-0 bg-[#18181B]/80" />
-              <Image
-                src={photo3}
-                alt="Project interface"
-                fill
-                className="object-cover mix-blend-luminosity opacity-90"
-                sizes="224px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-          </div>
-        </div>
-
-        {/* Right side mockups */}
-        <div className="absolute top-[25%] -right-10 w-[480px]">
-          <div className="relative">
-            {/* Main window */}
-            <div className="relative w-[420px] h-[280px] rounded-2xl overflow-hidden animate-float-2 shadow-2xl">
-              <div className="absolute inset-0 bg-[#18181B]/80" />
-              <Image
-                src={photo4}
-                alt="Project interface"
-                fill
-                className="object-cover mix-blend-luminosity opacity-90"
-                sizes="420px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-
-            {/* Floating elements */}
-            <div className="absolute -top-20 left-8 w-72 h-52 rounded-2xl overflow-hidden animate-float-3 delay-500 shadow-xl">
-              <div className="absolute inset-0 bg-[#18181B]/80" />
-              <Image
-                src={photo5}
-                alt="Project interface"
-                fill
-                className="object-cover mix-blend-luminosity opacity-90"
-                sizes="288px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-
-            <div className="absolute -bottom-12 left-12 w-60 h-60 rounded-2xl overflow-hidden animate-float-1 shadow-xl">
-              <div className="absolute inset-0 bg-[#18181B]/80" />
-              <Image
-                src={photo6}
-                alt="Project interface"
-                fill
-                className="object-cover mix-blend-luminosity opacity-90"
-                sizes="240px"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-            </div>
-          </div>
-        </div>
+      <div className="relative w-full h-full max-w-6xl mx-auto">
+        {photos.map((src, index) => (
+          <motion.div
+            key={index}
+            className="absolute rounded-2xl overflow-hidden shadow-lg"
+            initial={{ y: 20,rotate: 0 }}
+            animate={{ y: [0, -10, 10, 0],rotate: [0, 1, -1, 0] }}
+            transition={{
+              duration: 10,
+              delay: Math.random(), // Random delay between 0s and 1s
+              repeat: Infinity,
+              repeatType: 'reverse',
+              ease: 'easeInOut'
+            }}
+            style={{
+              left: elements[index].x,
+              top: elements[index].y,
+              width: `${elements[index].width}px`,
+              height: `${elements[index].height}px`
+            }}
+          >
+            <div className="absolute inset-0 bg-[#18181B]/80" />
+            <Image src={src} alt="Project interface" fill className="object-cover opacity-90" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+          </motion.div>
+        ))}
       </div>
     </motion.div>
   );

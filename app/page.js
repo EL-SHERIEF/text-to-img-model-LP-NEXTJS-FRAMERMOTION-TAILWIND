@@ -1,31 +1,27 @@
 import NavigationBar from './components/NavigationBar';
 import HeroContent from './components/HeroContent';
 import FloatingMockups from './components/FloatingMockups';
-import GlowEffect from './components/GlowEffect';
 import MarqueeLogos from './components/MarqueeLogos';
 import ProductOverview from './components/ProductOverview';
 import FeaturesSection from './components/FeaturesSection';
 import BenefitsSection from './components/BenefitsSection';
+import PricingSection from './components/PricingSection';
+import FAQSection from './components/FAQSection';
+import TestimonialsSection from './components/TestimonialsSection';
+import TrialSection from './components/TrialSection';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* Background Effects */}
-      <GlowEffect />
 
       {/* Content */}
       <div className="relative">
-        {/* Navigation */}
         <NavigationBar />
 
-        {/* Hero Section */}
         <section className="relative pt-40 pb-32">
-          <div className="relative z-10">
             <HeroContent />
-          </div>
-          <div className="absolute inset-0 z-0">
             <FloatingMockups />
-          </div>
         </section>
 
         {/* Logos Section */}
@@ -47,6 +43,29 @@ export default function Home() {
         <section className="relative z-10">
           <BenefitsSection />
         </section>
+
+        {/* Pricing Section */}
+        <section className="relative z-10">
+          <PricingSection />
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="relative z-10">
+          <TestimonialsSection />
+        </section>
+
+        {/* Trial Section */}
+        <section className="relative z-10">
+          <TrialSection />
+        </section>
+
+        {/* FAQ Section */}
+        <section className="relative z-10">
+          <FAQSection />
+        </section>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </main>
   );

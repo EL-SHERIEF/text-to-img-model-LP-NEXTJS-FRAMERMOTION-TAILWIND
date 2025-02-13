@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import lightEffect from '@/public/assets/2.webp';
+import image1 from '@/public/Photos/hd.jpg';
 
 const ProductOverview = () => {
   const containerRef = useRef(null);
@@ -101,7 +102,7 @@ const ProductOverview = () => {
           }}
         >
           <Image
-            src="/assets/dashboard.png"
+            src={image1}
             alt="Suprema Dashboard"
             fill
             className="object-cover"
