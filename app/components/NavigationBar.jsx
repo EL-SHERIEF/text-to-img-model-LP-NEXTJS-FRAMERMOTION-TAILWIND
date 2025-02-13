@@ -39,7 +39,7 @@ const NavigationBar = () => {
           </div>
 
           {/* Contact Button */}
-      <NavButton text="Contact" url="mailto:hello@suprema.com"/>
+      <NavButton text="Contact" url="mailto:hello@spAIce.com"/>
         </div>
     </nav>
   );

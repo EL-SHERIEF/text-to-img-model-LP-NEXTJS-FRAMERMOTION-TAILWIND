@@ -10,13 +10,13 @@ const testimonials = [
     name: 'David Lee',
     role: 'Senior Developer',
     image: '/testimonials/david.png',
-    content: 'Suprema has streamlined our processes, significantly improving communication and project outcomes.'
+    content: 'spAIce has streamlined our processes, significantly improving communication and project outcomes.'
   },
   {
     name: 'Rachel Adams',
     role: 'Marketing Director',
     image: '/testimonials/rachel.png',
-    content: 'With Suprema, our team collaboration has never been smoother or more efficient.'
+    content: 'With spAIce, our team collaboration has never been smoother or more efficient.'
   },
   {
     name: 'Mark Johnson',

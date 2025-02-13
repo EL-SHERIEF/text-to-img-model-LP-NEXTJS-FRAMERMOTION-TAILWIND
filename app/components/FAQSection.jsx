@@ -54,12 +54,12 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: 'What is Suprema?',
-      answer: 'Suprema is a comprehensive project management platform designed to streamline workflows, enhance team collaboration, and boost productivity through intelligent task management and real-time analytics.',
+      question: 'What is spAIce?',
+      answer: 'spAIce is a comprehensive project management platform designed to streamline workflows, enhance team collaboration, and boost productivity through intelligent task management and real-time analytics.',
     },
     {
       question: 'How secure is my data?',
-      answer: 'Suprema prioritizes data security by utilizing encryption, regular backups, and compliance with industry standards to protect sensitive information and maintain user privacy.',
+      answer: 'spAIce prioritizes data security by utilizing encryption, regular backups, and compliance with industry standards to protect sensitive information and maintain user privacy.',
     },
     {
       question: 'How does task assigning work?',
@@ -67,11 +67,11 @@ const FAQSection = () => {
     },
     {
       question: 'Can I customize my dashboard?',
-      answer: 'Yes, Suprema offers extensive dashboard customization options. You can arrange widgets, create custom views, and configure displays to match your specific workflow needs.',
+      answer: 'Yes, spAIce offers extensive dashboard customization options. You can arrange widgets, create custom views, and configure displays to match your specific workflow needs.',
     },
     {
       question: 'Is there mobile access?',
-      answer: 'Yes, Suprema is fully accessible through our mobile apps for iOS and Android, allowing you to manage projects and collaborate with your team on the go.',
+      answer: 'Yes, spAIce is fully accessible through our mobile apps for iOS and Android, allowing you to manage projects and collaborate with your team on the go.',
     },
     {
       question: 'What kind of support do you offer?',
@@ -79,7 +79,7 @@ const FAQSection = () => {
     },
     {
       question: 'Can I integrate with other tools?',
-      answer: 'Yes, Suprema integrates seamlessly with popular tools and platforms, allowing you to connect your existing workflow and maintain a unified experience.',
+      answer: 'Yes, spAIce integrates seamlessly with popular tools and platforms, allowing you to connect your existing workflow and maintain a unified experience.',
     },
     {
       question: 'What pricing plans are available?',
@@ -87,7 +87,7 @@ const FAQSection = () => {
     },
     {
       question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial with full access to all features, allowing you to experience Supremas capabilities firsthand.',
+      answer: 'Yes, we offer a 14-day free trial with full access to all features, allowing you to experience spAIces capabilities firsthand.',
     },
     {
       question: 'How do I provide feedback?',

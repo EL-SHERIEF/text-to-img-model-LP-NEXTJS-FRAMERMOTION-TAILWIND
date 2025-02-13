@@ -36,9 +36,9 @@ export default function Footer() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 relative">
-                <Image src="/logo.png" alt="Suprema" fill className="object-contain" />
+                <Image src="/logo.png" alt="spAIce" fill className="object-contain" />
               </div>
-              <span className="text-white text-xl font-medium">Suprema</span>
+              <span className="text-white text-xl font-medium">spAIce</span>
             </div>
             <p className="text-zinc-400 mb-6">Plan and navigate from idea to launch.</p>
             <div className="flex items-center gap-2 text-zinc-400">
@@ -47,8 +47,8 @@ export default function Footer() {
                   <path d="M3 7L9 12L15 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
-              <a href="mailto:hello@suprema.com" className="hover:text-white transition-colors">
-                hello@suprema.com
+              <a href="mailto:hello@spAIce.com" className="hover:text-white transition-colors">
+                hello@spAIce.com
               </a>
             </div>
           </div>

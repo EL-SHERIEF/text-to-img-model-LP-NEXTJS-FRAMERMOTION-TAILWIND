@@ -33,26 +33,26 @@ const ProductOverview = () => {
     <section ref={containerRef} className="relative min-h-screen pt-32 pb-16 overflow-hidden">
       {/* Light effect */}
       <motion.div 
-        className="absolute top-0 left-[15vw] w-[70vw] z-10"
+        className="absolute top-0 left-[15vw] w-[70vw] z-10 pointer-events-none"
         style={{
           scale: lightScale,
         }}
       >
-                   <div className='w-full h-2 bg-white blur-[4px]'></div>
-                   <div className='w-full h-1 bg-white blur-[10px]'></div>
-           <div className='w-full h-2 bg-white blur-[20px]'></div>
-          <svg className='w-full h-100px blur-[200px] opacity-60 absolute top-0' viewBox="0 0 1067 405" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <div className='w-full h-2 bg-[#ffffff] blur-[4px]'></div>
+                   <div className='w-full h-1 bg-[#ffffff] blur-[10px]'></div>
+           <div className='w-[110%] absolute left-[-5%] h-4 bg-[#ffffff] top-[30px] blur-[70px]'></div>
+          <svg className='w-full h-100px blur-[200px] opacity-90 absolute top-0' viewBox="0 0 1067 405" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="1067" height="12" rx="6" fill="url(#paint0_linear_2378_13)"/>
 <path d="M0 12H1063L1040.16 202.523C1038.75 214.27 1034.06 225.383 1026.63 234.589L909.128 380.18C896.762 395.502 877.943 404.162 858.261 403.586L217.465 384.847C199.081 384.309 181.849 375.765 170.294 361.456L29.9959 187.735C22.4871 178.437 17.7778 167.195 16.4177 155.322L0 12Z" fill="url(#paint1_radial_2378_13)"/>
 <defs>
 <linearGradient id="paint0_linear_2378_13" x1="403" y1="22.5" x2="403" y2="6" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stopColor="white" stop-opacity="0.41"/>
-<stop offset="0.75" stopColor="white"/>
-<stop offset="1" stopColor="white" stop-opacity="0.7"/>
+<stop offset="0.5" stopColor="#e5efff" stopOpacity="0.41"/>
+<stop offset="0.75" stopColor="#e5efff"/>
+<stop offset="1" stopColor="#e5efff" stopOpacity="0.7"/>
 </linearGradient>
 <radialGradient id="paint1_radial_2378_13" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(531 77) rotate(90) scale(312.5 846.338)">
-<stop stopColor="white"/>
-<stop offset="1" stopColor="white" stop-opacity="0"/>
+<stop stopColor="#e5efff"/>
+<stop offset="1" stopColor="#e5efff" stopOpacity="0"/>
 </radialGradient>
 </defs>
 </svg>
@@ -84,12 +84,12 @@ const ProductOverview = () => {
 
         {/* Title */}
         <h2 className="text-4xl font-semibold tracking-tight mb-4">
-          Suprema at a Glance
+          spAIce at a Glance
         </h2>
 
         {/* Description */}
         <p className="text-lg text-zinc-400">
-          Explore Suprema's powerful features designed to streamline project management,
+          Explore spAIce's powerful features designed to streamline project management,
           enhance collaboration, and boost efficiency.
         </p>
       </motion.div>
@@ -109,7 +109,7 @@ const ProductOverview = () => {
         >
           <Image
             src={image1}
-            alt="Suprema Dashboard"
+            alt="spAIce Dashboard"
             fill
             className="object-cover"
             priority

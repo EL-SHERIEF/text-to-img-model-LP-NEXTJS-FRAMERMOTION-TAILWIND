@@ -111,7 +111,7 @@ const BenefitsSection = () => {
           
           <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
             Maximize efficiency, enhance collaboration, and achieve project goals with
-            Suprema's powerful management tools.
+            spAIce's powerful management tools.
           </p>
         </div>
 
