@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import logo from '@/app/logo-white.svg'
 const navigationSections = {
   'Quick Navigation': [
     { name: 'Product Overview', href: '/product-overview' },
@@ -28,17 +28,16 @@ const navigationSections = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-black">
+    <footer className="border-t px-24 border-zinc-800 bg-black">
       <div className="container mx-auto px-4 py-16">
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
           {/* Logo and Description */}
           <div className="md:col-span-4">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 relative">
-                <Image src="/logo.png" alt="spAIce" fill className="object-contain" />
+              <div className="w-32 h-16 relative">
+                <Image src={logo} alt="spAIce" fill className="object-contain" />
               </div>
-              <span className="text-white text-xl font-medium">spAIce</span>
             </div>
             <p className="text-zinc-400 mb-6">Plan and navigate from idea to launch.</p>
             <div className="flex items-center gap-2 text-zinc-400">

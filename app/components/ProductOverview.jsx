@@ -46,13 +46,13 @@ const ProductOverview = () => {
 <path d="M0 12H1063L1040.16 202.523C1038.75 214.27 1034.06 225.383 1026.63 234.589L909.128 380.18C896.762 395.502 877.943 404.162 858.261 403.586L217.465 384.847C199.081 384.309 181.849 375.765 170.294 361.456L29.9959 187.735C22.4871 178.437 17.7778 167.195 16.4177 155.322L0 12Z" fill="url(#paint1_radial_2378_13)"/>
 <defs>
 <linearGradient id="paint0_linear_2378_13" x1="403" y1="22.5" x2="403" y2="6" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#B148FC"/>
-<stop offset="0.75" stop-color="#00EBFF"/>
-<stop offset="1" stop-color="#AD4CFE"/>
+<stop offset="0.5" stopColor="#B148FC"/>
+<stop offset="0.75" stopColor="#00EBFF"/>
+<stop offset="1" stopColor="#AD4CFE"/>
 </linearGradient>
 <radialGradient id="paint1_radial_2378_13" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(531 77) rotate(90) scale(312.5 846.338)">
-<stop stop-color="#1CCEDC"/>
-<stop offset="1" stop-color="#AE4BFE" stop-opacity="0.35"/>
+<stop stopColor="#1CCEDC"/>
+<stop offset="1" stopColor="#AE4BFE" stopOpacity="0.35"/>
 </radialGradient>
 </defs>
 </svg>
