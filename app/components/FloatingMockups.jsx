@@ -16,15 +16,15 @@ import photo8 from '@/public/Photos/9.jpeg';
 const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8];
 
 const elements = [
-  { x: '-24%', y: '10%', width: 300, height: 300 },
-  { x: '-5%', y: '45%', width: 100, height: 140 },
-  { x: '-16%', y: '45%', width: 100, height: 140 },
-  { x: '-30%', y: '65%', width: 380, height: 260 },
+  { x: '-18%', y: '10%', width: 300, height: 300 },
+  { x: '-6%', y: '45%', width: 100, height: 140 },
+  { x: '-17%', y: '45%', width: 100, height: 140 },
+  { x: '-31%', y: '65%', width: 380, height: 260 },
    // second row
-  { x: '90%', y: '20%', width: 320, height: 210 },
-  { x: '90%', y: '46%', width: 150, height: 150 },
-  { x: '105%', y: '45%', width: 160, height: 160 },
-  { x: '95%', y: '67%', width: 210, height: 270 }
+  { x: '95%', y: '20%', width: 320, height: 210 },
+  { x: '91%', y: '46%', width: 150, height: 150 },
+  { x: '106%', y: '45%', width: 160, height: 160 },
+  { x: '94%', y: '67%', width: 210, height: 270 }
 ];
 
 const FloatingMockups = () => {
