@@ -13,7 +13,7 @@ import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black text-white overflow-hidden">
+    <main className="relative min-h-screen bg-[#030a11] text-white overflow-hidden">
 
       {/* Content */}
       <div className="relative">

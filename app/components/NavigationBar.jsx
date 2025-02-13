@@ -1,11 +1,12 @@
 'use client';
-import NavButton from './shared/NavButton';
+import CTAButton from './shared/CTAButton';
 import logo from '@/app/logo-white.svg';
 import Image from 'next/image';
+
 const NavigationBar = () => {
   return (
     <nav className="fixed top-4 left-0 z-50 w-screen xl:px-60 md:px-32 sm-px-16 px-8 mx-auto">
-          <div className=" flex items-center justify-between bg-black/50 backdrop-blur-xl border-b border-zinc-700/50 p-2 rounded-2xl">
+          <div className=" flex items-center justify-between  backdrop-blur-3xl border-b border-zinc-700/50 p-2 rounded-2xl">
           {/* Logo */}
           <a href="/" className="group flex items-center gap-2">
            <Image src={logo} alt="spAIce" width={140} height={40}/>          </a>
@@ -39,8 +40,8 @@ const NavigationBar = () => {
           </div>
 
           {/* Contact Button */}
-      <NavButton text="Contact" url="mailto:hello@spAIce.com"/>
-        </div>
+          <CTAButton>Login</CTAButton>
+          </div>
     </nav>
   );
 };

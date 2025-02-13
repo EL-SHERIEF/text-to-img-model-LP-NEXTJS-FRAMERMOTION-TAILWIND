@@ -4,14 +4,14 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 
-import photo1 from '@/public/Photos/1.png';
-import photo2 from '@/public/Photos/2.png';
-import photo3 from '@/public/Photos/10.jpeg';
-import photo4 from '@/public/Photos/5.jpeg';
-import photo5 from '@/public/Photos/6.jpeg';
-import photo6 from '@/public/Photos/7.jpeg';
-import photo7 from '@/public/Photos/8.jpeg';
-import photo8 from '@/public/Photos/9.jpeg';
+import photo1 from '@/public/Photos/11.jpeg';
+import photo2 from '@/public/Photos/12.jpeg';
+import photo3 from '@/public/Photos/13.jpeg';
+import photo4 from '@/public/Photos/14.jpeg';
+import photo5 from '@/public/Photos/15.jpeg';
+import photo6 from '@/public/Photos/16.jpeg';
+import photo7 from '@/public/Photos/17.jpeg';
+import photo8 from '@/public/Photos/8.jpeg';
 
 const photos = [photo1, photo2, photo3, photo4, photo5, photo6, photo7, photo8];
  

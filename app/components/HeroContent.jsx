@@ -1,5 +1,5 @@
 'use client';
-import CTAButton from './CTAButton';
+import CTAButton from './shared/CTAButton';
 import Image from 'next/image';
 import dots from '@/public/assets/1.webp';
 const HeroContent = () => {
@@ -43,9 +43,9 @@ const HeroContent = () => {
       </button>
       
       <div className="relative z-10 space-y-7">
-        <h1 className="text-[70px] leading-[1.2] tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+        <h1 className="[text-shadow:_0_5px_40px_#ffffff30] text-[70px] leading-[1.2] tracking-tight font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
           Design and innovate<br />
-          Successful digital ideas.
+          Successful <span className='text-transparent bg-clip-text bg-gradient-to-b from-[#2DBFDA] to-[#AA4DFE] [text-shadow:_0_5px_40px_#AA4DFE]'>digital ideas.</span>
         </h1>
         
         <p className="text-xl text-zinc-400 max-w-2xl mx-auto font-normal">

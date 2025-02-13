@@ -4,10 +4,10 @@ const CTAButton = ({ children }) => {
   return (
     <button className="group relative">
       {/* Button background with gradient border */}
-      <div className="absolute -inset-[1px] rounded-full bg-gradient-to-r from-white/20 via-white to-white/20" />
+      <div className="absolute -inset-[1px] rounded-full border border-white/[0.08]" />
       
       {/* Button content */}
-      <div className="relative px-8 py-3 rounded-full bg-black text-white text-sm font-medium transition-all duration-200 group-hover:bg-black/95">
+      <div className="shadow-2xl shadow-[#8c2ed45f] relative px-8 py-4 rounded-2xl bg-gradient-to-r from-[#8B2ED4] to-[#1CCCD9] backdrop-blur-sm text-white text-sm font-medium transition-all duration-200 group-hover:backdrop-blur-2xl">
         <div className="flex items-center gap-2">
           {children}
           <svg 
