@@ -19,7 +19,7 @@ export default function Home() {
       <div className="relative">
         <NavigationBar />
 
-        <section className="relative pt-44 pb-32">
+        <section className="relative pt-36 pb-32">
             <HeroContent />
             <FloatingMockups />
         </section>

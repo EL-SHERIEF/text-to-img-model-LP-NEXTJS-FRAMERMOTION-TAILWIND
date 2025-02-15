@@ -6,6 +6,7 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+  --transition-ease: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 * {
@@ -20,21 +21,41 @@ body {
   font-feature-settings: "ss01", "ss02", "cv01", "cv02";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-synthesis: none;
 }
 
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* Better button hover states */
 button {
   -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s var(--transition-ease);
+  will-change: transform;
+}
+
+button:active {
+  transform: scale(0.97);
 }
 
 /* Improved text rendering */
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  transition: all 0.2s var(--transition-ease);
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Custom mask for marquee */
@@ -53,45 +74,62 @@ h1, h2, h3, h4, h5, h6 {
   );
 }
 
-/* Prevent layout shift */
-html, body {
-  overflow-x: hidden;
+/* Container padding consistency */
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1920px;
 }
 
-/* Better image rendering */
+@media (min-width: 640px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(24, 24, 27);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(63, 63, 70);
+  border-radius: 5px;
+  transition: background 0.2s var(--transition-ease);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(82, 82, 91);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid rgb(var(--foreground-rgb));
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Image rendering */
 img {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-}
-
-/* 3D Perspective */
-.perspective-1000 {
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
-}
-
-/* Benefit card styles */
-@property --card-gradient-stop {
-  syntax: '<percentage>';
-  inherits: false;
-  initial-value: 10%;
-}
-
-.benefit-card {
-  --card-gradient-stop: 10%;
-  transition: --card-gradient-stop 0.3s ease;
-}
-
-.benefit-card:hover {
-  --card-gradient-stop: 30%;
-}
-
-/* Stats gradient text */
-.stats-gradient {
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  -webkit-user-drag: none;
+  user-select: none;
 }
