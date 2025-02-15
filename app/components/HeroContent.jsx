@@ -35,7 +35,7 @@ const HeroContent = () => {
         {/* Arrow */}
         <div className="relative w-5 h-5 rounded-full bg-white/[0.08] group-hover:bg-white/[0.03] transition-colors duration-200">
         <svg             className="absolute inset-0 text-white/70 transition-transform duration-200 group-hover:translate-x-0.5"
- viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 7L15 12L10 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+ viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 7L15 12L10 17" stroke="#ffffff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
         </div>
       </button>
       
@@ -111,7 +111,7 @@ const HeroContent = () => {
                 <button
                   key={i}
                   onClick={() => setPrompt(example)}
-                  className="px-3 py-1.5 rounded-lg border border-zinc-800 hover:border-zinc-700 hover:text-zinc-300 transition-all duration-200"
+                  className="px-3 py-1.5 rounded-lg border bg-[#030a11] border-zinc-800 hover:border-zinc-700 hover:text-zinc-300 transition-all duration-200"
                 >
                   {example}
                 </button>

@@ -70,7 +70,7 @@ const MarqueeLogos = () => {
     <div className="relative">
       {/* Trusted by text */}
       <div className="text-center mb-8">
-        <p className="text-sm text-zinc-500">
+        <p className="text-sm text-zinc-600">
           Trusted by 50,000+ businesses for innovative design and growth.
         </p>
       </div>
@@ -83,8 +83,8 @@ const MarqueeLogos = () => {
         </div>
 
         {/* Gradient masks */}
-        <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-black via-black to-transparent z-10" />
-        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-black via-black to-transparent z-10" />
+        <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-[#030a11] via-[#030a11] to-transparent z-10" />
+        <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-[#030a11] via-[#030a11] to-transparent z-10" />
       </div>
     </div>
   );
