@@ -58,7 +58,7 @@ export default function TestimonialsSection() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
         <h2 className="text-4xl font-semibold mb-4">What Our Users Say</h2>
       </div>
 
-      <div className="max-w-[400px] mx-auto">
+      <div className="max-w-[1400px] mx-auto">
         <Slider {...settings}>
           {testimonials.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
